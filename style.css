@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 200px;
+    padding: 20px 200px;
 }
 
 .nav .link ul {
@@ -34,7 +34,8 @@ body {
 
 .nav .link ul a {
     text-decoration: none;
-    color: #2a2a2a;
+    /*color: #2a2a2a;*/
+    color: white;
     font-weight: 600;
     transition: all 200ms ease-in-out;
 }
@@ -110,7 +111,7 @@ ul a .active {
     color: #2a2a2a;
     font-size: 40px;
     margin: 0px 14px;
-    transition: all 2000ms ease-in-out;
+    transition: all 200ms ease-in-out;
     cursor: pointer;
 }
 
@@ -142,7 +143,7 @@ ul a .active {
 /* ----------------------------- */
 
 .skills-section {
-    background-color: #f9f9f9;
+     background-color: #f9f9f9;
      flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
@@ -151,17 +152,70 @@ ul a .active {
 .skills-section h2 {
     text-align: center;
     margin-bottom: 20px;;
+     padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
 }
 
-.icon {
+.skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+ }
+.skills-section p {
+    font-weight: bold;
+}
+
+
+ .icon {
     width: 60px;
     height: 40px;
     transition: transform 0.3s;
+ .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+ }
+
+
+.skill {
+    background-color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+.skill:hover {
+    transform: scale(1.1); /* Makes the skill box grow */
+    background-color: #f4637b; /* Changes the background color */
+    color: #fff; /* Changes the text color */
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
 }
 
-.icon:hover {
-    transform: scale(1.1);
-}
+/*.skills-section {*/
+/*    background-color: #f9f9f9;*/
+/*     flex-wrap: wrap;*/
+/*    gap: 10px;*/
+/*    justify-content: center;*/
+/*    padding: 10px;*/
+/*}*/
+/*.skills-section h2 {*/
+/*    text-align: center;*/
+/*    margin-bottom: 20px;;*/
+/*}*/
+
+/*.icon {*/
+/*    width: 60px;*/
+/*    height: 40px;*/
+/*    transition: transform 0.3s;*/
+/*}*/
+
+/*.icon:hover {*/
+/*    transform: scale(1.1);*/
+/*}*/
 
 /* ------------------------------------------------- */
 
@@ -259,4 +313,70 @@ ul a .active {
 
 .contact-us a:hover {
     color: #0056b3;
+}
+/*--------------------*/
+.footer {
+    background-color: #212529 ;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    min-width: 500px;
+}
+
+.footer-left h3, .footer-right h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    margin-bottom: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    color: #007bff;
 }
