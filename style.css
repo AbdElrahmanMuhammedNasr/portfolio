@@ -143,16 +143,7 @@ ul a .active {
 /* ----------------------------- */
 
 .skills-section {
-     background-color: #f9f9f9;
-     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
-}
-.skills-section h2 {
-    text-align: center;
-    margin-bottom: 20px;;
-     padding: 20px;
+    padding: 20px;
     margin: 0 auto;
     text-align: left;
     font-family: Arial, sans-serif;
@@ -162,21 +153,17 @@ ul a .active {
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: bold;
- }
+}
 .skills-section p {
     font-weight: bold;
 }
 
 
- .icon {
-    width: 60px;
-    height: 40px;
-    transition: transform 0.3s;
- .skills {
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
- }
+}
 
 
 .skill {
