@@ -1,24 +1,32 @@
 let posts = [
     {
-        title: '@Async in spring boot',
+        title: '@Async in spring boot can be  bad ',
         date: 'August 25, 2024',
         summary: [
-            { type: 'text', content: 'This is a summary of ' },
-            { type: 'bold', content: 'Post 1' },
-            { type: 'text', content: '.' },
-            { type: 'image', src: '../asyncPic/1.png', alt: 'Placeholder Image' },
-            { type: 'text', content: 'This is a summary of ' },
+            { type: 'text', content: 'let\'s  talk about Async look at this code this code will wat 10 sec and print this message ' },
+             { type: 'image', src: './asyncPic/1.png', alt: 'Placeholder Image' },
+            { type: 'text', content: 'i will send 9 request at same time  we will find the the first 8 requests done at same time but the request number 9 wait 10 sec until it excute ' },
+            { type: 'image', src: './asyncPic/2.png', alt: 'Placeholder Image' },
+            { type: 'text', content: 'this because of <strong>threadPoolTaskExecutorBuilder</strong> it makes' +
+                    ' 8 thread to about 2 billion threads and queue size is 2 billion this make request number 9 will wait because the 8 thread serve the first 8 requests' +
+                    'and will not create new thread because the queue is not full yet ' },
+            { type: 'image', src: './asyncPic/3.png', alt: 'Placeholder Image' },
+            { type: 'text', content: 'how can we  solve it'},
+            { type: 'text', content: 'crete custom threadPoolTaskExecutorBuilder'},
+            { type: 'image', src: './asyncPic/4.png', alt: 'Placeholder Image' },
+            { type: 'text', content: 'and use the name of bean installed of leave  it  empty'},
+            { type: 'image', src: './asyncPic/5.png', alt: 'Placeholder Image' },
+            { type: 'text', content: 'So when I sent 9 requests at the same time, the first 3 were executed at the same time because there were already 3 threads. The second 3 were added to the queue waiting. The third 3 did not find a place in the queue, so 3 new threads were created. When the first 3 finished their tasks, they went to the 3 in the queue and executed them.'},
+            { type: 'image', src: './asyncPic/6.png', alt: 'Placeholder Image' },
 
         ]
     },
     {
-        title: 'Why sencornd and transaction did not wok',
+        title: 'Why synchronized  and transaction does not wok correctly',
         date: 'August 26, 2024',
         summary: [
             { type: 'text', content: 'This is a summary of ' },
-            { type: 'bold', content: 'Post 2' },
-            { type: 'text', content: '.' },
-            { type: 'image', src: 'https://via.placeholder.com/150', alt: 'Placeholder Image' },
+
         ]
     },
     // Add more posts as needed
@@ -30,8 +38,6 @@ function createSummary(summaryArray) {
     return summaryArray.map(item => {
         if (item.type === 'text') {
             return `<p>${item.content}</p>`;
-        } else if (item.type === 'bold') {
-            return `<strong>${item.content}</strong>`;
         } else if (item.type === 'image') {
             return `<img src="${item.src}" alt="${item.alt}" />`;
         }
