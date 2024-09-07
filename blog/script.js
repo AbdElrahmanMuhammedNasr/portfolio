@@ -25,7 +25,7 @@ let posts = [
     },
     {
         title: 'Why synchronized  and transaction does not wok correctly',
-        date: 'september 7, 2024',
+        date: 'September 7, 2024',
         summary: [
             { type: 'text', content: 'look at this code let\'s assume we send 2 requests at same time with same payload' },
             { type: 'text', content: '<strong> hash code is not unique in database </strong> ' },
