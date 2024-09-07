@@ -24,3 +24,7 @@ B
 project/styles.css,0\4\0496e2d251cabe2374eba0bfb3741c51a6a27de7
 D
 project/project.html,f\2\f2caa0dfeb7580a6cc6e385cfb0fda9ff3752b36
+P
+ img/undraw_online_cv_re_gn0a.svg,8\2\828f90557cae2897830eeb27d5690e08b2067e81
+=
+img/about.svg,6\7\6759dfb776797650e633543486fcd47c231e44d1

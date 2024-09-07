@@ -17,11 +17,12 @@ body {
 
 }
 
-.nav {
+.hero .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 200px;
+    background-color: #00343d;
 }
 
 .nav .link ul {
@@ -41,11 +42,11 @@ body {
 }
 
 ul a .active {
-    color: #f4637b;
+    color: #0bd8a2;
 }
 
 .nav .link ul a:hover {
-    color: #f4637b;
+    color: #0bd8a2;
 }
 
 .main {
@@ -60,15 +61,7 @@ ul a .active {
 
 }
 
-/*.main .men {*/
-/*    !*width: 4000px;*!*/
-/*    transition: all 2000ms ease;*/
-/*    cursor: pointer;*/
-/*}*/
 
-/*.main .men:hover{*/
-/*    transform: scale(1.3);*/
-/*}*/
 
 .main .main-detil {
     text-align: center;
@@ -106,7 +99,7 @@ ul a .active {
 }
 
 .main .btn .btn-2:hover {
-    background: #f4637b;
+    background: #0bd8a2;
     transform: scale(1.1);
 }
 
@@ -119,7 +112,7 @@ ul a .active {
 }
 
 .social i:hover {
-    color: #f4637b;
+    color: #0bd8a2;
 }
 
 .sub-btn a{
@@ -135,14 +128,54 @@ ul a .active {
 }
 /* ------------------------------------------------------ */
 .about-section{
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 20px;
+    background-color: #00C896;
 }
 .about-section h2 {
-    text-align: center;
+    /*text-align: center;*/
     margin-bottom: 20px;
 }
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+
+}
+
+.content {
+    width: 90%;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.sub-heading {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #f0f0f0;
+}
+
+
+
+.button:hover {
+    background-color: #f0f0f0;
+}
+
+.illustration {
+    width: 50%;
+    text-align: right;
+}
+
+.illustration img {
+    width: 80%;
+    max-width: 500px;
+}
+
+
 /* ----------------------------- */
 
 .skills-section {
@@ -170,49 +203,28 @@ ul a .active {
 
 
 .skill {
-    background-color: #e0e0e0;
+    background-color: #00343d;
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 500;
-    color: #333;
+    color: white;
 }
 .skill:hover {
     transform: scale(1.1); /* Makes the skill box grow */
-    background-color: #f4637b; /* Changes the background color */
+    background-color: #0bd8a2; /* Changes the background color */
     color: #fff; /* Changes the text color */
     transition: all 600ms ease-in-out;
     cursor: pointer;
 }
 
-/*.skills-section {*/
-/*    background-color: #f9f9f9;*/
-/*     flex-wrap: wrap;*/
-/*    gap: 10px;*/
-/*    justify-content: center;*/
-/*    padding: 10px;*/
-/*}*/
-/*.skills-section h2 {*/
-/*    text-align: center;*/
-/*    margin-bottom: 20px;;*/
-/*}*/
-
-/*.icon {*/
-/*    width: 60px;*/
-/*    height: 40px;*/
-/*    transition: transform 0.3s;*/
-/*}*/
-
-/*.icon:hover {*/
-/*    transform: scale(1.1);*/
-/*}*/
 
 /* ------------------------------------------------- */
 
 
 .experience-section {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #0bd8a2;
 }
 
 .experience-section h2 {
@@ -240,24 +252,22 @@ ul a .active {
     color: #000;
 }
 .project-description {
-    background-color: #f5f5f5;
+    background-color: #00343d;
     padding: 20px;
     border-radius: 8px ;
-    /*border: 1px solid #f4637b;*/
-    margin: 20px auto;
+     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.9s;
 
 }
 .project-description:hover {
-    background-color: #f4637b;
     transform: scale(.99)
 }
 
 .project-description h3 {
     font-size: 1.5em;
-    color: #333;
-    margin-bottom: 15px;
+     margin-bottom: 15px;
+    color: white;
 }
 
 .project-description ul {
@@ -267,10 +277,13 @@ ul a .active {
     color: #444;
 }
 
+
 .project-description li {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 10px;
+    color: white;
+
 }
 
 
@@ -313,7 +326,7 @@ ul a .active {
 }
 /*--------------------*/
 .footer {
-    background-color: #212529 ;
+    background-color: #00343d ;
     color: #fff;
     padding: 20px 0;
 }

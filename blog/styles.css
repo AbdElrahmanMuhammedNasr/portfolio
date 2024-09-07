@@ -9,17 +9,13 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #00343d;
     color: #fff;
     padding: 0.1rem;
     text-align: center;
 }
 
-nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
+
 
 .blog-posts {
     margin: 20px;
