@@ -1,9 +1,9 @@
 let posts = [
     {
-        title: '@Async in spring boot can be  bad ',
+        title: 'Async in spring boot can be  bad ',
         date: 'August 25, 2024',
         summary: [
-            { type: 'text', content: 'let\'s  talk about Async look at this code this code will wat 10 sec and print this message ' },
+            { type: 'text', content: 'let\'s  talk about Async look at this code this code will wait 10 sec and print this message ' },
              { type: 'image', src: './asyncPic/1.png', alt: 'Placeholder Image' },
             { type: 'text', content: 'i will send 9 request at same time  we will find the the first 8 requests done at same time but the request number 9 wait 10 sec until it excute ' },
             { type: 'image', src: './asyncPic/2.png', alt: 'Placeholder Image' },
