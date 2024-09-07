@@ -25,9 +25,20 @@ let posts = [
     },
     {
         title: 'Why synchronized  and transaction does not wok correctly',
-        date: 'August 26, 2024',
+        date: 'september 7, 2024',
         summary: [
-            { type: 'text', content: 'This is a summary of ' },
+            { type: 'text', content: 'look at this code let\'s assume we send 2 requests at same time with same payload' },
+            { type: 'text', content: '<strong> hash code is not unique in database </strong> ' },
+            { type: 'image', src: './transaction-sync/1.png', alt: 'Placeholder Image' },
+            { type: 'text', content: 'one of two reqests will block the function until finish because <strong> synchronized </strong> ' +
+                    '<br/> will generate hash code and check in Database if exist and will save it and unlock the function ,' +
+                    '<br/> the second request will enter the function and lock it ' +
+                    'and generate the same hash code and check  in Database and will throw excprion because the hash code is exist ' },
+            { type: 'text', content: 'but what happen is quit different the 2 request saved in database with the same hash code ' },
+            { type: 'text', content: 'the reason is because the order the request will unlock the function and commit the  change in database  and the time between unlock the function and commit the change the second request entered the function and generate the hash code and pass the validation' },
+            { type: 'text', content: 'How can we solve it' },
+            { type: 'text', content: 'remove @Transactional and use TransactionTemplate ' },
+
 
         ]
     },
