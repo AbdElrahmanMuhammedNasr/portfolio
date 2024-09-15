@@ -77,8 +77,7 @@ function createBlogPost(title, date, summaryArray) {
 
     // Add event listener to toggle the summary visibility
      const summaryContent = post.querySelector('.summary-content');
-    const allPost = post.querySelector('.all-post');
-    const postHeader = post.querySelector('.post-header');
+     const postHeader = post.querySelector('.post-header');
     postHeader.addEventListener('click', () => {
         const isVisible = summaryContent.style.display === 'block';
         summaryContent.style.display = isVisible ? 'none' : 'block';

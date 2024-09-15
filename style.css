@@ -224,7 +224,7 @@ ul a .active {
 
 .experience-section {
     padding: 20px;
-    background-color: #0bd8a2;
+    /*background-color: #0bd8a2;*/
 }
 
 .experience-section h2 {
@@ -235,6 +235,7 @@ ul a .active {
 
 .experience-item {
     margin-bottom: 20px;
+    /*border: 1px solid black;*/
 }
 
 .experience-item h3 {
