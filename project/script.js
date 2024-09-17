@@ -12,7 +12,7 @@ let projects = [
         ]
 
     }, {
-        image:"./shorter/1.png",
+        image:"./tunnel/1.png",
         title:"Tunnel client",
         description:"receive the request from server handle it  and return response to server",
         tools:'Java  ,  Socket ' ,
@@ -25,7 +25,7 @@ let projects = [
 
     },
     {
-        image:"./shorter/1.png",
+        image:"./tunnel/1.png",
         title:"Tunnel Server",
         description:"Socket Server listening to request and send it to client to handle the request and get response",
         tools:'Spring boot  ,  Socket ' ,
@@ -37,8 +37,8 @@ let projects = [
         ]
 
     },    {
-        image:"./shorter/1.png",
-        title:"YouTube",
+        image:"./video/1.jpg",
+        title:"Video Service",
         description:"video service upload video to minio and quality service get the  video and convert into frames and create many videos with different quality   ",
         tools:'Spring boot , PostgreSQL  ,  FastApi  , OpenCv   , Minio' ,
         url: [
@@ -71,16 +71,16 @@ function createURLs(urlArray) {
 
 function createProjectPost(image,title, description, tools ,url ) {
     const post = document.createElement('project');
-    post.classList.add('project');
+    post.classList.add('post');
     const urlsHTML = createURLs(url); // Generate URLs
 
 
     post.innerHTML = `      
-      <div class="project" id="project-posts">
+      <div class="project" >
         <img src="${image}" alt="Project  Image">
         <h2>${title}</h2>
-        <p class="description"><strong>Description:</strong> ${description}</p>
-        <p><strong>Tools:</strong> ${tools} </p>
+        <h3 class="description"><strong>Description:</strong> ${description}</h3>
+        <h3><strong>Tools:</strong> ${tools} </h3>
        <p>${urlsHTML}</p> <!-- Display URLs -->
 
     </div>
