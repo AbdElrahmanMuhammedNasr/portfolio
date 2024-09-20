@@ -40,7 +40,7 @@ let projects = [
         image:"./video/1.jpg",
         title:"Video Service",
         description:"video service upload video to minio and quality service get the  video and convert into frames and create many videos with different quality   ",
-        tools:'Spring boot , PostgreSQL  ,  FastApi  , OpenCv   , Minio, Kafka , consul' ,
+        tools:'Spring boot , PostgreSQL  ,  FastApi  , OpenCv   , Minio, Kafka , Consul' ,
         url: [
             {
                 link: "https://github.com/AbdElrahmanMuhammedNasr/stream",
