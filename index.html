@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelrahman | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Abdelrahman</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Abdelrahman</h1>
+                <p class="subtitle">Software Engineer</p>
+                <p class="description">I build exceptional digital experiences that make life easier</p>
+                <div class="social-links">
+                    <a href="https://github.com/AbdElrahmanMuhammedNasr" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/abdelrahman-nasr-074098167/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <strong>I am a passionate Backend Developer with a strong foundation in Java, Spring Boot, and PostgreSQL. With experience in building scalable infrastructure components and extensive data processing systems, I thrive on solving complex problems and optimizing system performance.
+                        I am committed to continuous learning, always staying updated with the latest technologies and industry trends. My goal is to keep growing as a developer and make a meaningful contribution to every team I work with.</strong>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div id="container" class="container">
+            <h2>Skills</h2>
+            <div id="myco" ></div>
+<!--            <div id="skills-grid" class="skills-grid">-->
+<!--                <div id="skill-item" class="skill-item"></div>-->
+<!--            </div>-->
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Java Back-End Developer - full time</h3>
+                        <p class="company"><strong>Digination</strong></p>
+                        <p class="period">12/2023 - Present</p>
+                        <ul>
+                            <li>Built a comprehensive internal service to manage budgets across sectors, clusters, and
+                                systems, ensuring seamless coordination and financial oversight.
+                            </li>
+                            <li>Designed and implemented a system for creating and managing programs, including supply
+                                chain management and workflow automation from program creation to final approval.
+                            </li>
+                            <li>Focused on writing clean, maintainable code that adheres to software engineering
+                                principles and best practices, ensuring a robust and scalable system.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- More experience items... -->
+
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Java Back-End Developer - full time</h3>
+                        <p class="company"><strong>Bypa-ss</strong></p>
+                        <p class="period">6/2022 to 11/2023</p>
+                        <ul>
+                            <li>Developed Back-End Applications for Healthcare (TagRx)</li>
+                            <li>Developed Back-End Applications for (Novartis)</li>
+                            <li>Developed a URL Management Service (Taglink)</li>
+                            <li>Developed an Express.js Redirection Server</li>
+                            <li>Implemented ELK Stack Logging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for=name>Name</label>
+                        <input type="text" id=name name=name required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Abdelrahman. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+    // Array of skills with categories, names, and proficiency levels
+    const skills = [
+        {
+            category: "Programming Language", skills: [
+                { name: "Java", proficiency: 95, color: "#007396", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" },
+                { name: "JavaScript", proficiency: 95, color: "#f7df1e", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
+                { name: "TypeScript", proficiency: 85, color: "#007acc", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" },
+                { name: "Python", proficiency: 90, color: "#3776ab", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" },
+            ]
+        },
+
+        {
+            category: "Frontend Skills", skills: [
+                { name: "HTML5", proficiency: 90, color: "#e34f26", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" },
+                { name: "CSS3", proficiency: 90, color: "#2965f1", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" },
+                { name: "Bootstrap", proficiency: 85, color: "#7952b3", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" },
+                { name: "Angular", proficiency: 80, color: "#dd0031", icon: "https://angular.io/assets/images/logos/angular/angular.svg" },
+                { name: "React", proficiency: 90, color: "#61dafb", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
+
+            ]
+        },
+        {
+            category: "Backend Skills", skills: [
+                { name: "Spring", proficiency: 90, color: "#6db33f", icon: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg" },
+                { name: "Node.js", proficiency: 90, color: "#68a063", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" },
+                { name: "Express.js", proficiency: 85, color: "#ffffff", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" },
+                { name: "FastAPi", proficiency: 90, color: "#6db33f", icon: "https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/fastapi.svg" },
+            ]
+        },{
+            category: "Technical Skills", skills: [
+                { name: "KeyCloak", proficiency: 85, color: "#2496ed", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Logo_of_Keycloak.svg" },
+                { name: "Nginx", proficiency: 85, color: "#6db33f", icon: "https://www.vectorlogo.zone/logos/nginx/nginx-icon.svg" },
+                { name: "Kafka", proficiency: 85, color: "#231f20", icon: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" },
+                { name: "Axon server", proficiency: 85, color: "#dd0031", icon: " " },
+                { name: "Api Management Kong ", proficiency: 85, color: "#326ce5", icon: "https://www.vectorlogo.zone/logos/konghq/konghq-icon.svg" },
+            ]
+        },
+        {
+            category: "DevOps Skills", skills: [
+                {name: "Jenkins", proficiency: 80, color: "#232f3e", icon: "https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg"},
+                { name: "Docker", proficiency: 90, color: "#2496ed", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" },
+                { name: "Kubernetes", proficiency: 85, color: "#326ce5", icon: "https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" },
+                {name: "AWS", proficiency: 80, color: "#232f3e", icon: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"},
+                {name: "Azure", proficiency: 80, color: "#232f3e", icon: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"},
+                {name: "Nexus", proficiency: 80, color: "#232f3e", icon: "images/skills/aws.svg"},
+                {name: "SonarQube", proficiency: 80, color: "#232f3e", icon: "https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/sonarqube.svg"},
+                {name: "Prometheus ", proficiency: 80, color: "#232f3e", icon: "https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg"},
+                {name: "Grafana ", proficiency: 80, color: "#232f3e", icon: "https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg"},
+                {name: "ELK Stack ", proficiency: 80, color: "#232f3e", icon: "images/skills/aws.svg"},
+            ]
+        },
+        {
+            category: "Database Skills", skills: [
+                { name: "MySQL", proficiency: 85, color: "#4479a1", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" },
+                { name: "PostgreSQL", proficiency: 90, color: "#336791", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" },
+                { name: "MongoDB", proficiency: 85, color: "#47a248", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" },
+                { name: "Redis", proficiency: 80, color: "#dc382d", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" },
+                { name: "Elasticsearch", proficiency: 85, color: "#005571", icon: "https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" },
+            ]
+        },
+        {
+            category: "Database Migration", skills: [
+                { name: "liquibase", proficiency: 85, color: "#2962FF", icon: "https://upload.wikimedia.org/wikipedia/en/8/8f/Liquibase_Logo.svg" },
+                { name: "Flyway", proficiency: 85, color: "#CC0200", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Flyway_logo.svg" },
+            ]
+        },
+        {
+            category: "Other Skills", skills: [
+                {name: "Minio", proficiency: 70, color: "#00a1e5", icon: "https://www.vectorlogo.zone/logos/minioio/minioio-ar21.svg"},
+                {name: "FHIR", proficiency: 75, color: "#30bfbf", icon: "images/skills/fhir.svg"},
+                {name: "HapiFhir", proficiency: 75, color: "#30bfbf", icon: "images/skills/fhir.svg"},
+                { name: "Kibana", proficiency: 80, color: "#005571", icon: "https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" },
+                { name: "Logstash", proficiency: 80, color: "#005571", icon: "https://www.vectorlogo.zone/logos/elasticco_logstash/elasticco_logstash-icon.svg" },
+                { name: "Linux", proficiency: 90, color: "#fcc624", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" },
+                { name: "Bash", proficiency: 85, color: "#4eaa25", icon: "https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" },
+                { name: "Firebase", proficiency: 85, color: "#ffca28", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" },
+            ]
+        },
+        {
+            category: "Version Control", skills: [
+                { name: "Git", proficiency: 95, color: "#f05032", icon: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
+                { name: "GitHub", proficiency: 95, color: "#232f3e", icon: "https://www.vectorlogo.zone/logos/github/github-tile.svg" },
+                { name: "GitLab", proficiency: 95, color: "#f05032", icon: "https://www.vectorlogo.zone/logos/gitlab/gitlab-ar21.svg" },
+                { name: "BitBucket", proficiency: 95, color: "#00a1e5", icon: "https://www.vectorlogo.zone/logos/bitbucket/bitbucket-official.svg" },
+
+            ]
+        }
+    ];
+
+    // Generate skill items dynamically
+    const skillsContainer = document.getElementById("myco");
+
+
+    skills.forEach(({category, skills}) => {
+        // Create category section
+
+        const upperSection = document.createElement("div");
+        upperSection.innerHTML = `<h2>${category}</h2>`;
+
+        const categorySection = document.createElement("div");
+        categorySection.classList.add("skills-grid");
+
+
+        skills.forEach(({name, proficiency, color, icon}) => {
+            // Create individual skill item
+            const skillItem = document.createElement("div");
+            skillItem.classList.add("skill-item");
+            skillItem.innerHTML = `
+        <img src="${icon}" alt="${name}" class="skill-icon">
+     <h3 class="skill-name">${name}</h3>
+        <div class="skill-level">
+          <div class="skill-progress" style="width: ${proficiency}%; background-color: ${color};"></div>
+        </div>
+      `;
+            categorySection.appendChild(skillItem);
+        });
+        upperSection.appendChild(categorySection);
+
+        skillsContainer.appendChild(upperSection);
+    });
+</script>
+</body>
+</html>
