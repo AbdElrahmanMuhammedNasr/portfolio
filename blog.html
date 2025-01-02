@@ -10,47 +10,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Abdelrahman</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="blog-section">
-            <div class="container">
-                <h1>Blog Posts</h1>
-                <div class="blog-grid">
-                    <article class="blog-card">
-<!--                        <img src="images/blog/post1.jpg" alt="Blog Post 1">-->
-                        <div class="blog-content">
-                            <h2>Async in spring boot can be bad</h2>
-                            <p class="date">Posted on August 25, 2024</p>
-                            <p class="excerpt">let's talk about Async look at this code this code will wait 10 sec and print this message.</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Abdelrahman. All rights reserved.</p>
+<header>
+    <nav>
+        <div class="logo">Abdelrahman</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </footer>
+    </nav>
+</header>
 
-    <script src="js/main.js"></script>
+<main>
+    <section class="blog-section">
+        <div class="container">
+            <h1>Blog Posts</h1>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <h2>Clean Code May  Have A Performance Impact </h2>
+                        <p class="date">Posted on January 02, 2025</p>
+                        <p class="excerpt">
+                            When writing code, one of the primary goals is often readability and maintainability.
+                            Breaking down logic into smaller, reusable functions is a cornerstone of good software
+                            design.
+                            However, this approach may have a performance impact in performance-critical applications.
+
+                        <pre><code>
+public class FunctionPerformanceTest {
+    public static void main(String[] args) {
+        int iterations = 100_000_000;
+
+        long startTime = System.currentTimeMillis();
+        int result = 0;
+        for (int i = 0; i < iterations; i++) {
+            result += i * 2;
+            result -= i;
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println("In Main function time: " + (endTime - startTime) + " ms");
+
+        startTime = System.currentTimeMillis();
+        multipleFunctions(iterations);
+        endTime = System.currentTimeMillis();
+        System.out.println("Multiple functions time: " + (endTime - startTime) + " ms");
+    }
+
+
+    private static void multipleFunctions(int iterations) {
+        int result = 0;
+        for (int i = 0; i < iterations; i++) {
+            result += compute1(i);
+            result -= compute2(i);
+        }
+    }
+
+    private static int compute1(int x) {
+        return x * 2;
+    }
+
+    private static int compute2(int x) {
+        return x;
+    }
+}
+
+
+                                </code></pre>
+
+                        <img src="./blog/1/img.png" alt="Blog Post 1">
+
+                        <p>The Program Counter (PC) is a special register in the CPU that keeps track of the current instruction being executed. When a function call is made, the following steps occur:</p>
+                        <ul>
+                            <li>Saving the Current State</li>
+                            <li>Jumping to the Function's Address</li>
+                            <li>Returning to the Caller</li>
+                        </ul>
+
+                        </p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <!--                        <img src="images/blog/post1.jpg" alt="Blog Post 1">-->
+                    <div class="blog-content">
+                        <h2>Async in spring boot can be bad</h2>
+                        <p class="date">Posted on August 25, 2024</p>
+                        <p class="excerpt">let's talk about Async look at this code this code will wait 10 sec and print
+                            this message.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Abdelrahman. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
