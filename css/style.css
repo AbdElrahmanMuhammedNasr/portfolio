@@ -367,10 +367,10 @@ footer {
     flex-direction: column;
 }
 
-.certificate-card:hover {
+/* .certificate-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .certificate-image {
     width: 100%;
@@ -390,9 +390,9 @@ footer {
     padding: 20px;
 }
 
-.certificate-card:hover .certificate-image img {
+/* .certificate-card:hover .certificate-image img {
     transform: scale(1.05);
-}
+} */
 
 
 
