@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/experience.css">
 </head>
 <body>
 <header>
@@ -93,6 +94,7 @@
                             <li>Designed and deployed a high-performance notification service to ensure timely and reliable communication across the platform.  </li>
                             <li>Consistently delivered clean, maintainable, and well-documented code aligned with software engineering best practices, ensuring system scalability, reliability, and long-term maintainability.</li>
                         </ul>
+                        <button class="details-btn" onclick="openExperienceModal('prameg')">View Details</button>
                     </div>
                 </div>
 <!--                -->
@@ -113,12 +115,13 @@
                                 principles and best practices, ensuring a robust and scalable system.
                             </li>
                         </ul>
+                        <button class="details-btn" onclick="openExperienceModal('digination')">View Details</button>
                     </div>
                 </div>
 <!--             -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                <div class="timeline-content">
                         <h3>Java Back-End Developer - full time</h3>
                         <p class="company"><strong>Bypa-ss</strong></p>
                         <p class="period">6/2022 to 11/2023</p>
@@ -129,6 +132,7 @@
                             <li>Developed an Express.js Redirection Server</li>
                             <li>Implemented ELK Stack Logging</li>
                         </ul>
+                        <button class="details-btn" onclick="openExperienceModal('bypass')">View Details</button>
                     </div>
                 </div>
             </div>
@@ -161,7 +165,16 @@
     </div>
 </footer>
 
+<!-- Experience Modal -->
+<div id="experienceModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeExperienceModal()">&times;</span>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
 <script src="js/main.js"></script>
+<script src="js/experience.js"></script>
 <script>
     // Function to generate a unique session ID
     function generateSessionId() {
