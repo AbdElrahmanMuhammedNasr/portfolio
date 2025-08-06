@@ -270,84 +270,84 @@
             const startTime = Date.now();
             let lastActivityTime = startTime;
             
-            setInterval(() => {
-                const now = Date.now();
-                if (now - userActivity.lastActivity > 5000) { // 5 seconds of inactivity
-                    userActivity.inactiveTime++;
-                } else {
-                    userActivity.activeTime++;
-                }
-            }, 1000);
+            // setInterval(() => {
+            //     const now = Date.now();
+            //     if (now - userActivity.lastActivity > 5000) { // 5 seconds of inactivity
+            //         userActivity.inactiveTime++;
+            //     } else {
+            //         userActivity.activeTime++;
+            //     }
+            // }, 1000);
 
             // Send notification every 20 seconds
-            const emailInterval = setInterval(async () => {
-                userActivity.timeSpent = Math.round((Date.now() - startTime) / 1000); // update time spent
-                const response = await fetch('https://831b40ac-07a4-43e5-a9eb-fc5852677f8b-00-anwctp8uvhh2.janeway.replit.dev/api/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        from: 'abdo300nasr@gmail.com',
-                        to: 'nasr.abdelrahmanmohamed@gmail.com',
-                        subject: `New Portfolio Visit - Session ${sessionId}`,
-                        body: `
-                            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-                                <h2 style="color: #64ffda; margin-bottom: 20px;">New Portfolio Visit</h2>
-                                
-                                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-                                    <h3 style="color: #333; margin-top: 0;">Session Information</h3>
-                                    <p style="margin: 10px 0;"><strong>Session ID:</strong> ${sessionId}</p>
-                                    <p style="margin: 10px 0;"><strong>Visit Start Time:</strong> ${new Date(userActivity.visitStartTime).toLocaleString()}</p>
-                                    <p style="margin: 10px 0;"><strong>Visit Time:</strong> ${visitTime}</p>
-                                    <p style="margin: 10px 0;"><strong>Time Zone:</strong> ${timeZone}</p>
-                                    <p style="margin: 10px 0;"><strong>Language:</strong> ${language}</p>
-                                </div>
-
-                                <div style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-                                    <h3 style="color: #333; margin-top: 0;">User Activity</h3>
-                                    <p style="margin: 10px 0;"><strong>Time Spent:</strong> ${userActivity.timeSpent} seconds</p>
-                                    <p style="margin: 10px 0;"><strong>Active Time:</strong> ${Math.round(userActivity.activeTime / 1000)} seconds</p>
-                                    <p style="margin: 10px 0;"><strong>Inactive Time:</strong> ${Math.round(userActivity.inactiveTime / 1000)} seconds</p>
-                                    <p style="margin: 10px 0;"><strong>Total Clicks:</strong> ${userActivity.clicks}</p>
-                                    <p style="margin: 10px 0;"><strong>Mouse Movements:</strong> ${userActivity.mouseMovements}</p>
-                                    <p style="margin: 10px 0;"><strong>Scroll Events:</strong> ${scrollEvents}</p>
-                                    <p style="margin: 10px 0;"><strong>Scroll Depth:</strong> ${userActivity.scrollDepth}%</p>
-                                    <p style="margin: 10px 0;"><strong>Sections Viewed:</strong> ${Array.from(userActivity.sectionsViewed).join(', ') || 'None'}</p>
-                                    <p style="margin: 10px 0;"><strong>Links Clicked:</strong> ${Array.from(userActivity.linksClicked).length}</p>
-                                    <p style="margin: 10px 0;"><strong>Skills Interacted With:</strong> ${Array.from(userActivity.skillInteractions).join(', ') || 'None'}</p>
-                                </div>
-
-                                <div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-                                    <h3 style="color: #333; margin-top: 0;">Section Engagement</h3>
-                                    ${Array.from(userActivity.hoverTimes.entries()).map(([section, time]) => `
-                                        <p style="margin: 10px 0;"><strong>${section}:</strong> ${Math.round(time / 1000)} seconds</p>
-                                    `).join('')}
-                                </div>
-
-                                <div style="margin-top: 20px; text-align: center; color: #666; font-size: 12px;">
-                                    <p style="margin: 0;">This is an automated notification from your portfolio website.</p>
-                                    <p style="margin: 5px 0;">Generated at: ${new Date().toISOString()}</p>
-                                </div>
-                            </div>
-                        `
-                    })
-                });
-                
-                if (!response.ok) {
-                    console.error('Failed to send email');
-                } else {
-                    console.log('Email sent successfully');
-                }
-            }, 10000); // 10 seconds
+            // const emailInterval = setInterval(async () => {
+            //     userActivity.timeSpent = Math.round((Date.now() - startTime) / 1000); // update time spent
+            //     const response = await fetch('https://831b40ac-07a4-43e5-a9eb-fc5852677f8b-00-anwctp8uvhh2.janeway.replit.dev/api/send-email', {
+            //         method: 'POST',
+            //         headers: {
+            //             'Content-Type': 'application/json',
+            //         },
+            //         body: JSON.stringify({
+            //             from: 'abdo300nasr@gmail.com',
+            //             to: 'nasr.abdelrahmanmohamed@gmail.com',
+            //             subject: `New Portfolio Visit - Session ${sessionId}`,
+            //             body: `
+            //                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            //                     <h2 style="color: #64ffda; margin-bottom: 20px;">New Portfolio Visit</h2>
+            //
+            //                     <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            //                         <h3 style="color: #333; margin-top: 0;">Session Information</h3>
+            //                         <p style="margin: 10px 0;"><strong>Session ID:</strong> ${sessionId}</p>
+            //                         <p style="margin: 10px 0;"><strong>Visit Start Time:</strong> ${new Date(userActivity.visitStartTime).toLocaleString()}</p>
+            //                         <p style="margin: 10px 0;"><strong>Visit Time:</strong> ${visitTime}</p>
+            //                         <p style="margin: 10px 0;"><strong>Time Zone:</strong> ${timeZone}</p>
+            //                         <p style="margin: 10px 0;"><strong>Language:</strong> ${language}</p>
+            //                     </div>
+            //
+            //                     <div style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            //                         <h3 style="color: #333; margin-top: 0;">User Activity</h3>
+            //                         <p style="margin: 10px 0;"><strong>Time Spent:</strong> ${userActivity.timeSpent} seconds</p>
+            //                         <p style="margin: 10px 0;"><strong>Active Time:</strong> ${Math.round(userActivity.activeTime / 1000)} seconds</p>
+            //                         <p style="margin: 10px 0;"><strong>Inactive Time:</strong> ${Math.round(userActivity.inactiveTime / 1000)} seconds</p>
+            //                         <p style="margin: 10px 0;"><strong>Total Clicks:</strong> ${userActivity.clicks}</p>
+            //                         <p style="margin: 10px 0;"><strong>Mouse Movements:</strong> ${userActivity.mouseMovements}</p>
+            //                         <p style="margin: 10px 0;"><strong>Scroll Events:</strong> ${scrollEvents}</p>
+            //                         <p style="margin: 10px 0;"><strong>Scroll Depth:</strong> ${userActivity.scrollDepth}%</p>
+            //                         <p style="margin: 10px 0;"><strong>Sections Viewed:</strong> ${Array.from(userActivity.sectionsViewed).join(', ') || 'None'}</p>
+            //                         <p style="margin: 10px 0;"><strong>Links Clicked:</strong> ${Array.from(userActivity.linksClicked).length}</p>
+            //                         <p style="margin: 10px 0;"><strong>Skills Interacted With:</strong> ${Array.from(userActivity.skillInteractions).join(', ') || 'None'}</p>
+            //                     </div>
+            //
+            //                     <div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            //                         <h3 style="color: #333; margin-top: 0;">Section Engagement</h3>
+            //                         ${Array.from(userActivity.hoverTimes.entries()).map(([section, time]) => `
+            //                             <p style="margin: 10px 0;"><strong>${section}:</strong> ${Math.round(time / 1000)} seconds</p>
+            //                         `).join('')}
+            //                     </div>
+            //
+            //                     <div style="margin-top: 20px; text-align: center; color: #666; font-size: 12px;">
+            //                         <p style="margin: 0;">This is an automated notification from your portfolio website.</p>
+            //                         <p style="margin: 5px 0;">Generated at: ${new Date().toISOString()}</p>
+            //                     </div>
+            //                 </div>
+            //             `
+            //         })
+            //     });
+            //
+            //     if (!response.ok) {
+            //         console.error('Failed to send email');
+            //     } else {
+            //         console.log('Email sent successfully');
+            //     }
+            // }, 10000); // 10 seconds
 
             // Clear interval when user leaves
-            window.addEventListener('beforeunload', () => {
-                clearInterval(emailInterval);
-                userActivity.timeSpent = Math.round((Date.now() - startTime) / 1000);
-                localStorage.removeItem('currentSessionId');
-                localStorage.removeItem('sessionStartTime');
-            });
+            // window.addEventListener('beforeunload', () => {
+            //     // clearInterval(emailInterval);
+            //     userActivity.timeSpent = Math.round((Date.now() - startTime) / 1000);
+            //     localStorage.removeItem('currentSessionId');
+            //     localStorage.removeItem('sessionStartTime');
+            // });
         } catch (error) {
             console.error('Error sending email:', error);
         }
